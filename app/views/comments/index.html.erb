@@ -1,0 +1,13 @@
+<h1>All Comments</h1>
+
+<p>Probably won't actually use this page, just hashing out the comment profiles</p>
+
+  <% @comments.each do |comment| %>
+    <div class="commentprofile">
+      <p>Comment: <%= comment.content %></a>
+      <p>ID: <%= comment.id %></p>
+      <p>Wine Id: <%= comment.wine_id %></p>
+      <br>
+    </div>
+    <br>
+  <% end %>

@@ -1,0 +1,24 @@
+
+<h1>Wines Edit</h1>
+
+<p>Edit a wine form here</p>
+
+<div>
+  <%= form_for(@wine) do |f| %>
+  <%= f.label :maker %>
+  <%= f.text_field :maker %><br>
+  <%= f.label :wine_type %>
+  <%= f.text_field :wine_type %><br>
+  <%= f.label :region %>
+  <%= f.text_field :region %><br>
+  <%= f.label :vintage %>
+  <%= f.text_field :vintage %><br>
+  <%= f.label :price %>
+  <%= f.text_field :price %><br>
+  <%= f.label :rating %>
+  <%= f.select :rating, (1..5) %><br>
+
+<%=f.submit %>
+<% end %>
+
+</div>

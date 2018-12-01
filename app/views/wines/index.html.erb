@@ -1,0 +1,18 @@
+
+<h2>Welcome <%= current_user.username %></h2>
+
+<h3>Your Wine List</h3>
+
+<p>this page will show a list of user's wines when user is signed in</p>
+
+  <% @wines.each do |wine| %>
+  <div class="wineprofile">
+    <p>Maker: <%= wine.maker %></p>
+    <p>Vintage: <%= wine.vintage %></p>
+    <%= link_to wine.maker, wine_path(wine) %>
+    <br>
+  </div>
+  <br>
+    <% end %>
+
+<%= link_to 'Sign Out', signout_path, method: :delete %>

@@ -1,0 +1,19 @@
+
+<h3>Sign Up</h3>
+<br>
+
+<div class="signup">
+<%= form_for(@user) do |f| %>
+
+  <label>Name: </label>
+  <%= f.text_field :username %><br><br>
+
+  <label>Email: </label>
+  <%= f.email_field :email %><br><br>
+
+  <label>Password: </label>
+  <%= f.password_field :password %><br><br>
+
+  <%= f.submit %>
+<% end %>
+</div>

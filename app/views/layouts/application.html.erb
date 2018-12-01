@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Grapevine</title>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>The Grapevine</h1>
+    </header>
+    <nav>
+    </nav>
+    <br>
+    <br>
+    <%= yield %>
+    <br>
+    <br>
+    <footer>Copyright &copy; TheGrapevine</footer>
+
+  </body>
+</html>
