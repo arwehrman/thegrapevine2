@@ -1,7 +1,8 @@
+<div class="greeting">
+  <h1>Welcome <%= current_user.username %></h1>
 
-<h2>Welcome <%= current_user.username %></h2>
+</div>
 
-<h4>Your Wine List</h4>
 
 <p>Click on the link to see more info on specific wine</p>
 
@@ -18,6 +19,6 @@
       <% end %>
   </div>
 
-
+  <%= link_to 'Add a New Wine', new_wine_path%><br><br>
 
 <%= link_to 'Sign Out', signout_path, method: :delete %>
