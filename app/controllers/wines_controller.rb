@@ -2,6 +2,10 @@ class WinesController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @wines = Wine.all
+  end
+
+  def mywines
     @wines = current_user.wines
   end
 
