@@ -2,11 +2,11 @@ class WinesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @wines = Wine.all
+    @wines = Wine.paginate(page: params[:page], per_page: 6)
   end
 
   def mywines
-    @wines = current_user.wines
+    @wines = current_user.wines.paginate(page: params[:page], per_page: 6)
   end
 
   def new

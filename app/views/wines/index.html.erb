@@ -4,19 +4,29 @@
 </div>
 
 <p>Check out all the great and not so great wines reviewed by other users</p>
-
-<div class="card-deck">
-    <% @wines.each do |wine| %>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title"><%= wine.maker %></h5>
-      <p class="card-text"><%= wine.wine_type %></p>
-      <p class="card-text"><small class="text-muted"></small><%= wine.vintage %></p>
-      <%= link_to wine.maker, wine_path(wine) %>
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      <% @wines.each do |wine| %>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= wine.maker %></h5>
+          <p class="card-text"><%= wine.wine_type %></p>
+          <p class="card-text"><small class="text-muted"></small><%= wine.vintage %></p>
+          <%= link_to "See More", wine_path(wine), :class => 'btn btn-primary' %>
+        </div>
+      </div>
+        <% end %>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <%= will_paginate @wine, renderer: BootstrapPagination::Rails, previous_label: "Previous", next_label: "Next",
+        inner_window: 1, outer_window: 0 %>
+      </div>
     </div>
   </div>
-      <% end %>
-  </div>
+</div>
+
 
   <%= link_to 'Add a New Wine', new_wine_path%><br><br>
 
