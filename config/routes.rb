@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   delete '/signout' => 'sessions#destroy'
   get '/mywines' => 'wines#mywines', as: 'mywines'
 
-  resources :wines
+  resources :wines do
+      resources :comments, only: [:new, :create, :edit, :update, :destroy]
+    end
+    
   resources :users
-  resources :comments
+
 end

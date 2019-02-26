@@ -1,6 +1,9 @@
-<p>Click on the link to see more info on specific wine</p>
-
-<div class="album text-muted">
+<div class="mywine">
+  <h1>My Wines</h1>
+  <p>Click on the link to see more info on specific wine</p>
+  <%= link_to 'Add a New Wine', new_wine_path%><br><br>
+</div>
+<div class="album">
   <div class="container">
     <div class="row">
       <% @wines.each do |wine| %>
@@ -23,6 +26,6 @@
   </div>
 </div>
 
-  <%= link_to 'Add a New Wine', new_wine_path%><br><br>
+
 
 <%= link_to 'Sign Out', signout_path, method: :delete %>
