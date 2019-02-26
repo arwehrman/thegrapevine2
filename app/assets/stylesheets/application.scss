@@ -1,4 +1,3 @@
-@import 'bootstrap';
 
 html {
   position: relative;
@@ -20,21 +19,23 @@ body {
 }
 
 /* Wine Cards */
+
 .card {
-  float: left;
-  width: 33.333%;
-  padding: .75rem;
-  margin-bottom: 2rem;
-  color: #402039;
-  border: 0;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: #E2FCEF;
+  color: #170F11;
 }
 
-.card > img {
-  margin-bottom: .75rem;
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.card-text {
-  font-size: 85%;
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
 }
 
 /* Footer */
