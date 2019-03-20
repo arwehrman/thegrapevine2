@@ -6,14 +6,6 @@ development:
   host: localhost
   username: grapevine
   password: password1
-test:
-  adapter: postgresql
-  database: grapevinedb_test
-  pool: 5
-  timeout: 5000
-  host: localhost
-  username: grapvine
-  password: password1
 
 production:
   adapter: postgresql
